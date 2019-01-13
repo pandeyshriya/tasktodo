@@ -1,0 +1,17 @@
+
+{% extends 'base.html' %}
+{% block content %}
+<body>
+<h1><b>New Task</b></h1>
+<form method="POST">
+    {% csrf_token %}
+    {{ form }}
+    <button type="submit">Save Task</button>
+</form>
+
+{% if task %}
+<a href="{% url 'delete_task ' todo.id%}"> Delete</a>
+{% endif %}
+</body>
+
+{% endblock %}

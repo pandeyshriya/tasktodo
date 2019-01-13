@@ -1,0 +1,13 @@
+
+
+{% block content %}
+<body>
+<form method="post">
+    {% csrf_token %}
+    <h3>Are you sure you want to remove{{ todo.Task }}?</h3>
+    <button type="submit">Confirm</button>
+</form>
+
+</body>
+
+{% endblock %}
